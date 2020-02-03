@@ -1,100 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="timeTracker.css">
-  <title>Time Tracker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="timeTracker.css">
+    <title>Time Tracker</title>
 </head>
 <script src="timeTracker.js"></script>
+
 <body>
-    
 
-<div class="wrapper" id="wrapper">
 
-    <div class="headingContainer">
-        <h1> Patrick's Timetracker</h1>
+    <div class="wrapper" id="wrapper">
+
+        <div class="headingContainer">
+            <h1>DRASEKS TIMETRACKER</h1>
+        </div>
+
+        <div class="row" id="row0">
+            <div class="button">
+                <input type="checkbox" class="checkBox" id="checkbox" value="Checkbox" onclick="checkBox(this);">
+            </div>
+            <div class="col">
+                <h3> Project #</h3>
+                <div class="textFieldContainer">
+                    <textarea name="textField" id="projectNumber" cols="10" rows="1"></textarea>
+                </div>
+            </div>
+            <div class="col">
+                <h3> Show Name</h3>
+                <div class="textFieldContainer">
+                    <textarea name="textField" id="showName" cols="30" rows="1"></textarea>
+                </div>
+            </div>
+            <div class="col">
+                <h3> Line Item</h3>
+                <div class="textFieldContainer">
+                    <textarea name="textField" id="lineItem" cols="10" rows="1"></textarea>
+                </div>
+            </div>
+            <div class="col">
+                <h3> Time</h3>
+                <div class="textFieldContainer">
+                    <textarea class="timeWorked" name="textField" id="timeWorked" cols="10" rows="1"></textarea>
+                </div>
+            </div>
+            <div class="button">
+                <input type="button" id="startStop" value="Run" onclick="startStop(this);">
+            </div>
+            <div class="button">
+                <input type="button" id="deleteRow" value="Delete" onclick="deleteRow(this);">
+            </div>
+            <div class="button">
+                <input type="button" id="addRowButton" value="Add" onclick="addRow(this);">
+            </div>
+        </div>
+
+
+        <div class="row" id="row1">
+            <div class="button">
+                <input type="checkbox" class="checkBox" id="checkbox" value="Checkbox" onclick="checkBox(this);">
+            </div>
+            <div class="col">
+                <div class="textFieldContainer">
+                    <textarea name="textField" id="projectNumber" cols="10" rows="1"></textarea>
+                </div>
+            </div>
+            <div class="col">
+                <div class="textFieldContainer">
+                    <textarea name="textField" id="showName" cols="30" rows="1"></textarea>
+                </div>
+            </div>
+            <div class="col">
+                <div class="textFieldContainer">
+                    <textarea name="textField" id="lineItem" cols="10" rows="1"></textarea>
+                </div>
+            </div>
+            <div class="col">
+                <div class="textFieldContainer">
+                    <textarea class="timeWorked" name="textField" id="timeWorked" cols="10" rows="1"></textarea>
+                </div>
+            </div>
+            <div class="button">
+                <input type="button" id="startStop" value="Run" onclick="startStop(this);">
+            </div>
+            <div class="button">
+                <input type="button" id="deleteRow" value="Delete" onclick="deleteRow(this);">
+            </div>
+            <div class="button">
+                <input type="button" id="addRowButton" value="Add" onclick="addRow(this);">
+            </div>
+        </div>
+
+
+
     </div>
-
-    <div class="row" id="row0">
-        <div class="button">
-            <input type="checkbox" class="checkBox" id="checkbox" value="Checkbox" onclick="checkBox(this);">
-        </div>
-        <div class="col">   
-            <h3> Project #</h3>
-            <div class="textFieldContainer">
-                <textarea name="textField" id="projectNumber" cols="10" rows="1"></textarea>
-            </div>
-        </div>
-            <div class="col">  
-            <h3> Show Name</h3>
-            <div class="textFieldContainer">
-                <textarea name="textField" id="showName" cols="30" rows="1"></textarea>
-            </div>
-        </div>
-        <div class="col">  
-            <h3> Line Item</h3>
-            <div class="textFieldContainer">
-                <textarea name="textField" id="lineItem" cols="10" rows="1"></textarea>
-            </div>
-        </div>
-        <div class="col">      
-            <h3> Time</h3>
-            <div class="textFieldContainer">
-                <textarea class="timeWorked" name="textField" id="timeWorked" cols="10" rows="1"></textarea>
-            </div>
-        </div>
-        <div class="button">
-            <input type="button" id="startStop" value="Start/Stop" onclick="startStop(this);">
-        </div>
-        <div class="button">
-            <input type="button" id="deleteRow" value="Delete" onclick="deleteRow(this);">
-        </div>
-        <div class="button">
-            <input type="button" id="addRowButton" value="Add" onclick="addRow(this);">
-        </div>
-    </div>
-
-
-    <div class="row" id="row1">
-        <div class="button">
-            <input type="checkbox" class="checkBox" id="checkbox" value="Checkbox" onclick="checkBox(this);">
-        </div>
-        <div class="col">   
-            <div class="textFieldContainer">
-                <textarea name="textField" id="projectNumber" cols="10" rows="1"></textarea>
-            </div>
-        </div>
-            <div class="col">  
-            <div class="textFieldContainer">
-                <textarea name="textField" id="showName" cols="30" rows="1"></textarea>
-            </div>
-        </div>
-        <div class="col">  
-            <div class="textFieldContainer">
-                <textarea name="textField" id="lineItem" cols="10" rows="1"></textarea>
-            </div>
-        </div>
-        <div class="col">      
-            <div class="textFieldContainer">
-                <textarea class="timeWorked" name="textField" id="timeWorked" cols="10" rows="1"></textarea>
-            </div>
-        </div>
-        <div class="button">
-            <input type="button" id="startStop" value="Start/Stop" onclick="startStop(this);">
-        </div>
-        <div class="button">
-            <input type="button" id="deleteRow" value="Delete" onclick="deleteRow(this);">
-        </div>
-        <div class="button">
-            <input type="button" id="addRowButton" value="Add" onclick="addRow(this);">
-        </div>
-    </div>
-
-
-    
-</div> 
 
 
 
