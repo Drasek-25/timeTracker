@@ -16,33 +16,53 @@
     <div class="wrapper" id="wrapper">
 
         <div class="headingContainer">
-            <h1>DRASEKS TIMETRACKER</h1>
+            <div class="headingSubContainer">
+                <div class='headingSubContLeft'>
+                </div>
+                <div class='headingSubContMid'>
+                    <h1>PATRICKS TIMETRACKER</h1>
+                </div>
+                <div class='headingSubContRight'>
+
+                    <input type="image" src="./images/floppy.png" alt="floppy.png" height="50px" onclick="savePage()">
+                </div>
+            </div>
         </div>
 
+        <div class="rowHeader">
+            <div class="rowHeaderTag1">
+                <h3 id="header1"> Project #</h3>
+            </div>
+            <div class="rowHeaderTag2">
+                <h3 id="header2"> Show Name</h3>
+            </div>
+            <div class="rowHeaderTag3">
+                <h3 id="header3"> Line Item</h3>
+            </div>
+            <div class="rowHeaderTag4">
+                <h3 id="header4"> Time</h3>
+            </div>
+        </div>
         <div class="row" id="row0">
             <div class="button">
                 <input type="checkbox" class="checkBox" id="checkbox" value="Checkbox" onclick="checkBox(this);">
             </div>
             <div class="col">
-                <h3> Project #</h3>
                 <div class="textFieldContainer">
-                    <textarea name="textField" id="projectNumber" cols="10" rows="1"></textarea>
+                    <textarea name="textField" class="projectNumber" cols="10" rows="1"></textarea>
                 </div>
             </div>
             <div class="col">
-                <h3> Show Name</h3>
                 <div class="textFieldContainer">
-                    <textarea name="textField" id="showName" cols="30" rows="1"></textarea>
+                    <textarea name="textField" class="showName" cols="30" rows="1"></textarea>
                 </div>
             </div>
             <div class="col">
-                <h3> Line Item</h3>
                 <div class="textFieldContainer">
-                    <textarea name="textField" id="lineItem" cols="10" rows="1"></textarea>
+                    <textarea name="textField" class="lineItem" cols="10" rows="1"></textarea>
                 </div>
             </div>
             <div class="col">
-                <h3> Time</h3>
                 <div class="textFieldContainer">
                     <textarea class="timeWorked" name="textField" id="timeWorked" cols="10" rows="1"></textarea>
                 </div>
@@ -65,17 +85,17 @@
             </div>
             <div class="col">
                 <div class="textFieldContainer">
-                    <textarea name="textField" id="projectNumber" cols="10" rows="1"></textarea>
+                    <textarea name="textField" class="projectNumber" cols="10" rows="1"></textarea>
                 </div>
             </div>
             <div class="col">
                 <div class="textFieldContainer">
-                    <textarea name="textField" id="showName" cols="30" rows="1"></textarea>
+                    <textarea name="textField" class="showName" cols="30" rows="1"></textarea>
                 </div>
             </div>
             <div class="col">
                 <div class="textFieldContainer">
-                    <textarea name="textField" id="lineItem" cols="10" rows="1"></textarea>
+                    <textarea name="textField" class="lineItem" cols="10" rows="1"></textarea>
                 </div>
             </div>
             <div class="col">

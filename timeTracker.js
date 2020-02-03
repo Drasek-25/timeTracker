@@ -7,7 +7,7 @@ let timerList = [
 let rowCounter = 2;
 
 function addRow() {
-    let newRow = document.getElementById("row1");
+    let newRow = document.getElementById("row0");
     let cln = newRow.cloneNode(true);
     cln.id = `row${rowCounter}`;
     timerList.push([])
@@ -19,8 +19,8 @@ function addRow() {
 function deleteRow(elem) {
     let row = elem.parentNode.parentNode.id;
 
-    if (row == 'row0' || row == 'row1') {
-        alert('cannot remove row0 or row1');
+    if (row == 'row0') {
+        alert('cannot remove row0');
         return;
 
     } else {
@@ -86,11 +86,60 @@ function checkBox(elem) {
     currentlyChecked = document.getElementById(row).getElementsByClassName('checkBox')[0].checked;
 
     if (currentlyChecked == true) {
-        document.getElementById(row).style.border = "#EDA920 4px solid"
+        document.getElementById(row).style.border = "#EDA920 3px solid"
 
     } else {
         document.getElementById(row).style.border = "#EDA920 1px solid"
     }
 
 
+}
+
+function savePage() {
+    let csvRowChange = '\r\n'
+    let saveData = ['',
+        document.getElementById("header1").innerText,
+        document.getElementById("header2").innerText,
+        document.getElementById("header3").innerText,
+        document.getElementById("header4").innerText,
+        csvRowChange];
+    let projectNumber;
+    let showName;
+    let lineItem;
+    let time;
+    for (i = 0; document.getElementById(`row${i}`) !== null; i++) {
+        projectNumber = document.getElementById(`row${i}`).getElementsByClassName("projectNumber")[0].value;
+        showName = document.getElementById(`row${i}`).getElementsByClassName("showName")[0].value;
+        lineItem = document.getElementById(`row${i}`).getElementsByClassName("lineItem")[0].value;
+        time = document.getElementById(`row${i}`).getElementsByClassName("timeWorked")[0].value;
+        saveData.push(projectNumber);
+        saveData.push(showName);
+        saveData.push(lineItem);
+        saveData.push(time);
+        saveData.push(csvRowChange);
+    }
+    let d = new Date();
+    let month = d.getMonth()+1;
+    let day = d.getDate();
+    let year = d.getFullYear();
+    let saveDate = `${month}.${day}.${year}`;
+    console.log(d)
+    var file = new Blob([saveData], {
+        encoding: "UTF-8",
+        type: "text/csv;charset=UTF-8"
+    });
+    if (window.navigator.msSaveOrOpenBlob) // IE10+
+        window.navigator.msSaveOrOpenBlob(file, `Time Tracker_${saveDate}.csv`);
+    else { // Others
+        var a = document.createElement("a"),
+            url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = `Time Tracker_${saveDate}.csv`;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function () {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }, 0);
+    }
 }
