@@ -1,5 +1,3 @@
-Please note this app has no save function built in and as such if mostly useless.
-
 This is a webapp I created while learning javascript. This was a personal project I did to challange myself to go beyond what we had covered in class, I learned more during this project than I had in the first 2 weeks of bootcamp. I got the idea to make this from a Time Tracking app we use at my current job, since we were told that it would be removed eventually. I had a blast making all these functions work.
 
 Biggest Takeaways from this project. 
