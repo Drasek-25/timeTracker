@@ -13,36 +13,6 @@ html{
     justify-content: flex-start;
     width: auto;
 }
-.row    {
-    display: flex;
-    justify-content: space-evenly;
-    margin: auto;
-    align-items: center;
-    border: #EDA920 1px solid;
-    width: 800px;
-    height: 45px;
-    margin-bottom: 0px;
-    margin-top: -1px;
-}
-.rowHeader {
-    display: flex;
-    justify-content: center;
-    height: 30px;
-    padding-top: 10px;
-}
-.rowHeaderTag1  {
-    margin-right: 40px;
-}
-.rowHeaderTag2  {
-    margin-right: 170px;
-}
-.rowHeaderTag3  {
-    margin-right: 40px;
-}
-.rowHeaderTag4  {
-    margin-right: 210px;
-}
-
 h1  {
     margin-top: 12px;
     color: white;
@@ -57,16 +27,6 @@ h3 {
     letter-spacing: .05em;
     color: white;
 }
-textarea    {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    font-size: 16px;
-    resize: none;
-    background-color: #46465C;
-    color: white;
-    border: 1px black solid;
-    box-shadow: -2px 2px black;
-}
 .headingContainer   {
     display: flex;
     justify-content: center;
@@ -79,20 +39,6 @@ textarea    {
     margin-bottom: 10px;
     background-image: linear-gradient(to bottom right, #09090F, #1B1B29);
     box-shadow: 0px 2px black;
-}
-.button input {
-    background-color: #E26723;
-    border: none;
-    color: white;
-    padding: 8px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-bloc;
-    color: white;
-    font-weight: bold;
-    border-radius: 2px;
-    box-shadow: -3px 3px black;
-    
 }
 .headingSubContRight {
     margin: auto;
@@ -108,4 +54,83 @@ textarea    {
     display: flex;
     justify-content: space-between;
     width: 1000px;
+}
+.row    {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    align-items: center;
+    border: #EDA920 1px solid;
+    width: 800px;
+    height: 45px;
+    margin-bottom: 0px;
+    margin-top: -1px;
+}
+.rowHeader {
+    display: flex;
+    justify-content: flex-start;
+    
+    height: 35px;
+    width: 800px;
+    margin: auto;
+}
+.rowHeaderLeft  {
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    width: 35px;
+    height: auto;
+}
+.rowHeaderTag {
+    display: flex;
+    justify-content: flex-start;
+}
+.rowHeaderTag1 {
+    width: 106px;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: 5px;
+}
+.rowHeaderTag2 {
+    width: 274px;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: 5px;
+}
+.rowHeaderTag3 {
+    width: 106px;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: 5px;
+}
+.rowHeaderTag4 {
+    width: 200px;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: 5px;
+}
+
+textarea    {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+    resize: none;
+    background-color: #46465C;
+    color: white;
+    border: 1px black solid;
+    box-shadow: -2px 2px black;
+}
+
+.button input {
+    background-color: #E26723;
+    border: none;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-bloc;
+    color: white;
+    font-weight: bold;
+    border-radius: 2px;
+    box-shadow: -3px 3px black;    
 }
