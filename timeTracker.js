@@ -47,6 +47,7 @@ function deleteRow(elem) {
         let removeRow = document.getElementById(row);
         removeRow.remove();
         timerList.splice(rowNumber, 1)
+        console.log(`timelist: ${timerList}`);
     } else if (row == 'row0') {
         alert('cannot remove row0');
         return;
@@ -56,14 +57,17 @@ function deleteRow(elem) {
         let removeRow = document.getElementById(row);
         removeRow.remove();
         timerList.splice(rowNumber, 1)
+        console.log(`timelist: ${timerList}`);
+        console.log(`activelist: ${activeTimers}`);
     }
 }
 
 
-
+let end;
+let start;
 function startStop(elem) {
-    let end;
-    let start;
+    console.log(`timelist: ${timerList}`);
+    console.log(`activelist: ${activeTimers}`);
     let row = elem.parentNode.parentNode.id;
     let rowNumber = rowDigits(row);
     if (activeTimers.indexOf(row) == -1) {
@@ -184,7 +188,6 @@ function editTitle() {
     let header1 = document.getElementById('header1');
     let header2 = document.getElementById('header2');
     let header3 = document.getElementById('header3');
-    let header4 = document.getElementById('header4');
     let newHeader1 = prompt(`Please provide a new name for ${header1.innerText}.`)
     if (newHeader1 === null) {
         return;
@@ -197,12 +200,7 @@ function editTitle() {
     if (newHeader3 === null) {
         return;
     }
-    let newHeader4 = prompt(`Please provide a new name for ${header4.innerText}.`)
-    if (newHeader4 === null) {
-        return;
-    }
     header1.innerText = newHeader1
     header2.innerText = newHeader2
     header3.innerText = newHeader3
-    header4.innerText = newHeader4
 }
